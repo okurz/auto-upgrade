@@ -1,0 +1,5 @@
+services: docker
+language: shell
+git:
+  depth: 3
+script: travis_retry make test

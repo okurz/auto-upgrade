@@ -7,7 +7,7 @@ test: test-static test-unit
 ZYPPER := sudo -n --no-refresh in --no-recommends
 .PHONY: which-shellcheck
 which-shellcheck:
-	which shellcheck >& /dev/null || $(ZYPPER) ShellCheck
+	which shellcheck > /dev/null 2>&1 || $(ZYPPER) ShellCheck
 
 .PHONY: test-static
 test-static: which-shellcheck
